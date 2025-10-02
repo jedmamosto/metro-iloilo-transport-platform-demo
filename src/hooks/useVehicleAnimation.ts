@@ -124,7 +124,7 @@ export function useVehicleAnimation() {
   const [rotation, setRotation] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
 
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number | undefined>(undefined);
   const startTimeRef = useRef<number>(Date.now());
 
   useEffect(() => {

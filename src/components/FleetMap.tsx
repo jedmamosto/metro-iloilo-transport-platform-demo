@@ -51,8 +51,6 @@ export default function FleetMap() {
       doubleClickZoom={true}
       scrollWheelZoom={true}
       dragging={true}
-      tap={true}
-      tapTolerance={15}
     >
       {/* CartoDB Positron tiles - clean, professional look */}
       <TileLayer

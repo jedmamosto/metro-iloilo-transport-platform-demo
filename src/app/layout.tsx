@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "leaflet/dist/leaflet.css";
@@ -16,18 +16,19 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Metro Iloilo Transport Platform",
   description: "Live fleet tracking and monitoring for transport cooperatives in Iloilo City",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-    userScalable: true,
-  },
-  themeColor: "#2563EB",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
     title: "Metro Iloilo",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: "#2563EB",
 };
 
 export default function RootLayout({
