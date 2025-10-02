@@ -27,17 +27,17 @@ export default function Home() {
       <ProgressBar progress={progressPercentage} />
 
       {/* Header */}
-      <header className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-4 shadow-md z-[1000]">
-        <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl font-bold">
-              Metro Iloilo Transport Platform
+      <header className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 sm:px-6 py-3 sm:py-4 shadow-md z-[1000]">
+        <div className="flex items-center justify-between gap-3">
+          <div className="flex-1 min-w-0">
+            <h1 className="text-lg sm:text-2xl font-bold truncate">
+              Metro Iloilo
             </h1>
-            <p className="text-sm text-blue-100 mt-1">Real-time Fleet Monitoring System</p>
+            <p className="text-xs sm:text-sm text-blue-100 mt-0.5 sm:mt-1 hidden sm:block">Real-time Fleet Monitoring</p>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
-            <p className="text-xs text-blue-100">Demo Mode</p>
-            <p className="text-sm font-semibold">Diversion Road Route</p>
+          <div className="bg-white/10 backdrop-blur-sm px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-lg flex-shrink-0">
+            <p className="text-[10px] sm:text-xs text-blue-100">Demo Mode</p>
+            <p className="text-xs sm:text-sm font-semibold whitespace-nowrap">Diversion Rd</p>
           </div>
         </div>
       </header>

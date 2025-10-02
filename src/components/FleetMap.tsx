@@ -7,6 +7,7 @@ import {
   Marker,
   CircleMarker,
   useMap,
+  ZoomControl,
 } from "react-leaflet";
 import { useEffect } from "react";
 import { createBusIcon } from "./BusIcon";
@@ -45,7 +46,13 @@ export default function FleetMap() {
       center={ROUTE_CENTER}
       zoom={DEFAULT_ZOOM}
       style={{ height: "100%", width: "100%" }}
-      zoomControl={true}
+      zoomControl={false}
+      touchZoom={true}
+      doubleClickZoom={true}
+      scrollWheelZoom={true}
+      dragging={true}
+      tap={true}
+      tapTolerance={15}
     >
       {/* CartoDB Positron tiles - clean, professional look */}
       <TileLayer
@@ -57,6 +64,9 @@ export default function FleetMap() {
 
       {/* Fit map to route */}
       <FitBounds bounds={routeBounds} />
+
+      {/* Custom zoom controls - positioned for mobile */}
+      <ZoomControl position="bottomright" />
 
       {/* Start point marker (blue circle with pulse) */}
       <CircleMarker
